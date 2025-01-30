@@ -65,6 +65,10 @@ def main():
                 print("Game over!")
                 raise SystemExit
                 
+        for asteroid in asteroids:
+            for shot in shots_group:
+                if shot.collide(asteroid) == True:
+                    asteroid.kill()
         
             
         #Screen Filler     
